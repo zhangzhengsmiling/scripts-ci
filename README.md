@@ -1,0 +1,5 @@
+## js-script
+
+TO SIMPLIFY THE PROCEDURE OF CREATING CI
+
+---
