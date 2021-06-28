@@ -5,6 +5,7 @@ const installPackages = (packages, options = []) => {
   if(!packages || packages.length === 0) throw new Error('pacakges is requried!')
   const script = `yarn add ${packages.join(' ')} ${options.join(' ')}`;
   execSync(script, {stdio: [0, 1, 2]})
+  console.log(script);
 }
 
 module.exports = installPackages;

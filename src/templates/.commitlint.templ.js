@@ -1,6 +1,6 @@
 module.exports = {
   extents:[
-    "@commitlint/config-conventional"
+    "cz"
   ],
   rules:{
     'body-leading-blank': [1, 'always'],
@@ -20,18 +20,17 @@ module.exports = {
       2,
       'always',
       [
-        'build',
-        'chore',
-        'ci',
-        'docs',
         'feat',
         'fix',
-        'improvement',
-        'perf',
-        'refactor',
-        'revert',
+        'docs',
         'style',
-        'test'
+        'refactor',
+        'perf',
+        'test',
+        'build',
+        'ci',
+        'chore',
+        'revert'
       ]
     ]
   }
