@@ -10,6 +10,12 @@
     "cz-conventional-changelog": "^3.3.0",
     "husky": "4.3.6"
   },
+  "bin": {
+    "commitizen-init": "src/commitizen-init.js",
+    "husky-init": "src/husky-init.js",
+    "commitlint-init": "src/commitlint-init.js",
+    "standardversion-init": "src/standard-version.js"
+  },
   "config": {
     "commitizen": {
       "path": "node_modules/cz-conventional-changelog"
