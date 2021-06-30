@@ -12,10 +12,10 @@
     "standard-version": "^9.3.0"
   },
   "bin": {
-    "commitizen-init": "src/commitizen-init.js",
-    "husky-init": "src/husky-init.js",
-    "commitlint-init": "src/commitlint-init.js",
-    "standardversion-init": "src/standard-version.js"
+    "commitizen-init": "src/ci-scripts/commitizen-init.js",
+    "husky-init": "src/ci-scripts/husky-init.js",
+    "commitlint-init": "src/ci-scripts/commitlint-init.js",
+    "standardversion-init": "src/ci-scripts/standard-version.js"
   },
   "config": {
     "commitizen": {
