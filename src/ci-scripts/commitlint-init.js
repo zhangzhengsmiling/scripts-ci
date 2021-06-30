@@ -1,13 +1,14 @@
+#! /usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
-const installPackages = require('./utils/install-packages');
+const installPackages = require('../utils/install-packages');
 installPackages(['@commitlint/config-conventional','@commitlint/cli'], ['-D']);
-const homePath = process.cwd();
+const workspace = process.cwd();
 
 const commitlintTempl = fs.readFileSync(
-  path.resolve(homePath, 'src/templates/.commitlint.templ.js')
+  path.resolve(__dirname, '../templates/.commitlint.templ.js')
 ).toString();
-console.log(commitlintTempl);
 
-const dest = `${homePath}/.commitlintrc.js`;
+const dest = `${workspace}/.commitlintrc.js`;
 fs.writeFileSync(dest, commitlintTempl);
