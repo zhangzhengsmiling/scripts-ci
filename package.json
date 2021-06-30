@@ -15,7 +15,8 @@
     "commitizen-init": "src/ci-scripts/commitizen-init.js",
     "husky-init": "src/ci-scripts/husky-init.js",
     "commitlint-init": "src/ci-scripts/commitlint-init.js",
-    "standardversion-init": "src/ci-scripts/standard-version.js"
+    "standardversion-init": "src/ci-scripts/standard-version.js",
+    "webpack-init": "src/webpack-scripts/webpack-init.js"
   },
   "config": {
     "commitizen": {
