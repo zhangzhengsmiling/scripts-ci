@@ -1,21 +1,3 @@
-// const fs = require('fs');
-// const path = require('path');
-// const installPackages = require('./utils/install-packages');
-// const pkg = require('../package.json');
-
-// installPackages(['commitizen', 'cz-conventional-changelog'], [' -D']);
-// // installPackages(['cz-customizable'], ['-D']);
-
-// if(!pkg.config) {
-//   pkg.config = {
-//     "commitizen": {
-//       "path": "./node_modules/cz-customizable"
-//     }
-//   }
-// };
-
-// fs.writeFileSync('./package.json', JSON.stringify(pkg, null, 2));
-
 const fs = require('fs');
 const path = require('path');
 const installPackages = require('./utils/install-packages');
