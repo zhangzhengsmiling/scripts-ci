@@ -9,9 +9,10 @@ const config = {
 './src/app.js'
 ],
   output: {
-    path: './out',
-    filename: 'bundle.js',
-  },
+path: './out',
+filename: 'bundle.js',
+},
+
   module: {
     rules: [
       {

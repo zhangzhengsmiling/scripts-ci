@@ -1,13 +1,5 @@
 #! /usr/bin/env node
 
-// const parseArgvParser = require('../utils/command-line-argv-parser');
-
-// const argv = parseArgvParser(
-//   process.argv
-// );
-
-// console.log(argv);
-
 const fs = require('fs');
 const path = require('path');
 const temp = fs.readFileSync(
@@ -37,12 +29,26 @@ const requireString = requireBlockGenerator({
   APP: 'app-config'
 })
 
+class Output {
+  path = '';
+  filename = '';
+  
+  constructor(path, filename) {
+    this.path = path;
+    this.filename = filename;
+  }
+
+  toString() {
+    return 'output: {\n' +
+    `path: '${this.path}',\n` +
+    `filename: '${this.filename}',\n` +
+    '},\n'
+  }
+}
+
 const configString = configGenerator(`
   ${new Entry(['./src/main.js', './src/app.js'])}
-  output: {
-    path: './out',
-    filename: 'bundle.js',
-  },
+  ${new Output('./out', 'bundle.js')}
   module: {
     rules: [
       {
@@ -75,8 +81,6 @@ const str = replaceBlock({
   config: configString,
   export: exportString,
 })(temp);
-
-console.log(str);
 
 // const fsoutput = path.resolve(__dirname, 'output.config.js');
 fs.writeFileSync(PATH_OUTPUT, str);
