@@ -1,13 +1,25 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+// 4.x devServer配置
+// const devServer = {
+//   contentBase: path.resolve(__dirname, 'out'),
+//   port: 8000,
+//   host: '127.0.0.1',
+//   overlay: {
+//     errors: true,
+//   }
+// }
+// v5.x devServer配置
 const devServer = {
-  contentBase: path.resolve(__dirname, 'out'),
+  static: {
+    directory: path.resolve(__dirname, 'out')
+  },
   port: 8000,
   host: '127.0.0.1',
-  overlay: {
-    errors: true,
-  }
+  // overlay: {
+  //   errors: true,
+  // }
 }
 
 var config = {
